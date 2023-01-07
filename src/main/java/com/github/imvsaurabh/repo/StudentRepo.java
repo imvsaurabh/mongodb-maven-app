@@ -20,9 +20,9 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class StudentRepo {
-	private static Logger log = LoggerFactory.getLogger(StudentRepo.class);
+	private Logger log = LoggerFactory.getLogger(StudentRepo.class);
 	
-	public static List<Student> findAllStudent() {
+	public List<Student> findAllStudent() {
 		List<Student> students = null;
 		log.info("FindAll Initiated.");
 		try (MongoClient client = Configurations.mongoClient()) {
@@ -42,7 +42,7 @@ public class StudentRepo {
 		return students;
 	}
 	
-	public static List<Course> findAllCourse() {
+	public List<Course> findAllCourse() {
 		List<Course> courses = null;
 		log.info("FindAll Initiated.");
 		try (MongoClient client = Configurations.mongoClient()) {
@@ -62,7 +62,7 @@ public class StudentRepo {
 		return courses;
 	}
 	
-	public static List<Address> findAllAddress() {
+	public List<Address> findAllAddress() {
 		List<Address> addresses = null;
 		log.info("FindAll Initiated.");
 		try (MongoClient client = Configurations.mongoClient()) {
